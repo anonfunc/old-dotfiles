@@ -1,0 +1,14 @@
+#!/bin/sh
+
+cd home
+for file in .*
+do
+    echo "file=$file"
+    if [ "$file" = "." -o "$file" = ".." ]
+    then
+        continue
+    fi
+
+    echo ln -s `readlink -f "$file"` ~/"$file"
+done
+cd -
