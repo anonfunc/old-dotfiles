@@ -1,0 +1,36 @@
+[general]
+ui = basic
+accounts = workplace
+maxsyncaccounts = 5
+
+[Account workplace]
+localrepository = WdLocal
+remoterepository = WdRemote
+autorefresh = 1
+quick = 59
+
+[Repository WdLocal]
+type = Maildir
+localfolders = ~/Mail/workplace
+
+[Repository WdRemote]
+type = IMAP
+ssl = yes
+remotehost = owa.mailseat.com
+remoteuser = first.last@workplace.com
+remotepassfile = ~/.workplace-imap-password
+
+#[Account Gmail]
+#localrepository = GmailLocal
+#remoterepository = GmailRemote
+#autorefresh = 1
+#quick = 59
+
+#[Repository GmailLocal]
+#type = Maildir
+#localfolders = ~/Mail/Gmail
+
+#[Repository GmailRemote]
+#type = Gmail
+#remoteuser = anonfunc
+#remotepassfile = ~/.gmail-imap-password
