@@ -1,0 +1,87 @@
+[color]
+    branch = auto
+    status = auto
+    diff = auto
+    ui = auto
+    wtf = true
+    interactive = auto
+[pack]
+    threads = 0
+[diff]
+    renamelimit = 3000
+[user]
+    name = anonfunc
+    email = anonfunc@gmail.com
+[alias]        
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    llog = log --date=local
+    flog = log --follow -M -C -C -- 
+    plog = log --pretty=tformat:'%h %Cred%cr%Creset %cn %Cgreen%s%Creset'
+    me = log --pretty=tformat:'%h %Cred%cr%Creset %cn %Cgreen%s%Creset' --author=first
+    st = status -s
+    switch = !sl
+    blame = blame -w -M -C
+    annotate = blame -w
+    who = shortlog -s -n --
+    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+    patch = !git diff --no-prefix -U10000 --patience `git svnlast` HEAD
+    svnlast = rev-list -n1 --grep=git-svn-id HEAD
+    svnsquash = !git rebase -i `git svnlast`
+    has-reviewer = "!git rev-list -n1 HEAD --oneline | grep -q '\\[.*\\]'"
+    good-reviewer = "!git has-reviewer && git rev-list -n1 HEAD --oneline | grep -v -q '\\[none\\]'"
+    svnchanged = ! git log --pretty="format:" --name-only `git svnlast`..HEAD | sort | uniq
+    vd = push -f SUV HEAD
+    teamcity11 = tc bt157
+    teamcity12 = tc bt219
+    teamcity13 = tc bt270
+    teamcity14 = tc bt317
+    teamcity = tc bt411
+    tcc = tc bt412
+    teamcity-wmu = tc bt431
+    teamcity-rabbit11 = tc bt189 tools/fulltest/rabbit/build.properties
+    teamcity-rabbit = tc bt246 tools/fulltest/rabbit/build.properties
+    # Convenience?
+    c = checkout
+    m = commit -m
+    ca = commit --amend
+    a = add
+    ap = add -p
+    l = log
+    d = diff
+    supershow = log -1 -C --find-copies-harder -p
+    b = branch
+    ss = !git rebase -i `git svnlast`
+    sh = show HEAD
+    ja = jira all
+[merge]
+#	tool = meld
+    #tool = emacs
+    tool = fugitive
+[mergetool "fugitive"]
+    cmd = /usr/local/bin/vim -f -c \"Gdiff\" \"$MERGED\"
+[mergetool "emacs"]
+    cmd = ecmerge $LOCAL $REMOTE $BASE $MERGED
+    trustExitCode = false
+[rerere]
+    enabled = 1
+[core]
+    whitespace = fix,-indent-with-non-tab,trailing-space,-cr-at-eol
+    editor = /usr/local/bin/vim
+#	pager = less -$LESS -SFRX -SR +'/^---'
+[sendemail]
+    smtpencryption = tls
+    smtpuser = first.last@company.com
+    smtpserver = owa.mailseat.com
+    smtpserverport = 2525
+[help]
+    autocorrect = 5
+[guitool "SVN Fetch"]
+    cmd = git svn fetch
+[guitool "SVN Rebase"]
+    cmd = git svn rebase
+[notes]
+    rewriteRef = refs/notes/commits
+[filter "scrub"]
+    clean = sed -e "s/first/first/g" -e "s/First/First/g" -e "s/last/last/g" -e "s/Last/Last/g" -e "s/company/company/gI"
+    smudge = sed -e "s/first/first/g" -e "s/First/First/g" -e "s/last/last/g" -e "s/Last/Last/g" -e "s/company/company/gI"
