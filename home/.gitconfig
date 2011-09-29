@@ -83,5 +83,5 @@
 [notes]
     rewriteRef = refs/notes/commits
 [filter "scrub"]
-    clean = sed -e "s/first/first/g" -e "s/First/First/g" -e "s/last/last/g" -e "s/Last/Last/g" -e "s/company/company/gI"
-    smudge = sed -e "s/first/first/g" -e "s/First/First/g" -e "s/last/last/g" -e "s/Last/Last/g" -e "s/company/company/gI"
+    clean = sed -e "s/first/first/g" -e "s/First/First/g" -e "s/last/last/g" -e "s/Last/Last/g" -e "s/workplace/workplace/gI"
+    smudge = sed -e "s/first/first/g" -e "s/First/First/g" -e "s/last/last/g" -e "s/Last/Last/g" -e "s/workplace/workplace/gI"
