@@ -5,12 +5,17 @@ git submodule update --init
 cd home
 for file in .*
 do
-    echo "file=$file"
     if [ "$file" = "." -o "$file" = ".." ]
     then
         continue
     fi
 
-    ln -s `readlink -f "$file"` ~/"$file"
+    if [ -h ~/"$file" ]
+    then
+        echo "$file already a symbolic link."
+        continue
+    else
+        ln -s `readlink -f "$file"` ~/"$file"
+    fi
 done
 cd -
