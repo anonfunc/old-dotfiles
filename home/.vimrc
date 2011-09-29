@@ -43,7 +43,7 @@ set title
 set visualbell
 set noerrorbells
 
-if !&diff
+if !&diff && version >= 703
     set relativenumber
     set gdefault
 endif
