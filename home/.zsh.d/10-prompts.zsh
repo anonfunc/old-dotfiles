@@ -29,7 +29,7 @@ hg_ps1() {
 
 if [ "$USER" = "root" ]; then NCOLOR="red"; else NCOLOR="white"; fi
  
-PROMPT='[%?]%{$fg[green]%}%~%{$reset_color%} $(git_prompt_info)$(hg_ps1)$(__vcs_ps1)%(!.#.$) '
+PROMPT='%(?..[%?] )%{$fg[green]%}%m%{$reset_color%}:%{$fg[green]%}%~%{$reset_color%} $(git_prompt_info)$(hg_ps1)$(__vcs_ps1)%(!.#.$) '
 #PROMPT='[%?]%{$fg[green]%}%~%{$reset_color%} %(!.#.$) '
 RPROMPT='[%*]'
 
