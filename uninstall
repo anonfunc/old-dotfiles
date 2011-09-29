@@ -1,0 +1,17 @@
+#!/bin/sh
+
+cd home
+for file in .*
+do
+    if [ "$file" = "." -o "$file" = ".." ]
+    then
+        continue
+    fi
+
+    if [ -h ~/"$file" ]
+    then
+        echo "$file already a symbolic link, removing"
+        rm -i ~/"$file"
+    fi
+done
+cd -
