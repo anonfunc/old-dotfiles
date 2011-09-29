@@ -1,0 +1,11 @@
+escape ^Oo
+
+terminfo rxvt* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+term screen-256color
+
+autodetach on
+defc1 off
+
+defscrollback 300000
+
+ignorecase on
