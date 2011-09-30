@@ -10,3 +10,6 @@
 [submodule "home/.vim/bundle/vim-fugitive"]
 	path = home/.vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule "home/.zsh.d/lib/j"]
+	path = home/.zsh.d/lib/j
+	url = git://github.com/burke/j.git
