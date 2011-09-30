@@ -1,0 +1,32 @@
+[alias]
+show = log --color=always -pr
+# From hgtip.com
+cm = commit --message
+up = update --check
+. = summary
+! = compass
+: = status
+, = glog -l15 --template "\033[11;33m{rev} \033[0m{desc|firstline|fill68} \033[1;33m({date|age} ago by {author|person})\033[0m \033[11;33m{tags}\033[0m \033[1;34m{branches}\033[0m\n\n"
+,+ = , -l1000000000
+
+[ui]
+username = First Last <first.last@workplace.com>
+
+[defaults]
+addremove = --similarity 100
+
+[extensions]
+prompt = ~/bin/apps/hgext/hg-prompt/prompt.py
+histedit = ~/bin/apps/hgext/histedit/hg_histedit.py
+compass =~/bin/apps/hgext/hg-compass/compass.py
+mq =
+fetch =
+graphlog =
+record =
+bookmarks =
+hgk =
+pager =
+color =
+schemes=
+hgext.bookmarks =
+hggit =
