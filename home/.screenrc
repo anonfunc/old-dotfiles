@@ -5,7 +5,11 @@ term screen-256color
 
 autodetach on
 defc1 off
+defutf8 on
+defflow off
+altscreen on
 
 defscrollback 300000
 
 ignorecase on
+startup_message off
