@@ -1,0 +1,8 @@
+if [ -d ".svn" ]
+then
+    echo "[svn]"
+elif [ -d ".cvs" ]
+then
+    echo "[cvs]"
+fi
+

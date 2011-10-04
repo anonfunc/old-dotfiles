@@ -1,7 +1,7 @@
 export LD_LIBRARY_PATH=/usr/local/lib
 export JAVA_HOME="/opt/jdk1.6.0_15"
 export JDK_HOME="/opt/jdk1.6.0_15"
-fpath=("$HOME/.zsh.d/comp" $fpath)
+
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/bin/git-scripts:$PATH"
 #export PATH="$HOME/bin/apps/eclipse:$PATH"
@@ -23,3 +23,7 @@ export VISUAL="emacsclient -c -t"
 export GDK_NATIVE_WINDOWS=1
 export MAILDIR="/home/first/Mail"
 export ANDROID_HOME="/home/first/Playground/android-sdk-linux_x86"
+
+fpath=("$HOME/.zsh.d/comp" $fpath)
+fpath=("$HOME/.zsh.d/functions" $fpath)
+autoload -U ~/.zsh.d/functions/*(:t)

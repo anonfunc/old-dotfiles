@@ -54,10 +54,19 @@ settitle()
     printf "${titlestart}$*${titlefinish}"
 }
 
-preexec() {
+preexec_title() {
     if [[ "$TERM" == "screen" || "$TERM" == "screen-256color" ]]
     then
         local CMD=${2}
         settitle "${TITLE:-$PWD:$CMD}"
     fi
 }
+
+
+# Enable auto-execution of functions.
+typeset -ga preexec_functions
+typeset -ga precmd_functions
+typeset -ga chpwd_functions
+
+preexec_functions+='preexec_title'
+
