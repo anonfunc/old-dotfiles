@@ -67,6 +67,8 @@ preexec_title() {
 typeset -ga preexec_functions
 typeset -ga precmd_functions
 typeset -ga chpwd_functions
+typeset -ga periodic_functions
+export PERIOD=60
 
 preexec_functions+='preexec_title'
 
