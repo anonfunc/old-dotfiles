@@ -68,4 +68,4 @@ n warp,click 3,end,sh "sleep 0.3 && xdotool key Return"
 p warp, click 1, end, sh "xclip -o | xo_paster.perl"
 
 # Record macros
-q record ~/.keynav_macros
+q record /home/first/.keynav_macros

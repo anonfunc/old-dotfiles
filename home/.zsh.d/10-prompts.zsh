@@ -7,17 +7,11 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""               # Text to display if the branch is c
 
 setopt prompt_subst
 
-
-source ~/.zsh.d/lib/git.zsh
+#source ~/.zsh.d/lib/git.zsh
 source ~/.zsh.d/lib/git-prompts.zsh
 source ~/.zsh.d/lib/prompts.zsh
 autoload -U colors
 colors
-
-hg_ps1() {
-#         hg prompt --angle-brackets "$fg[red][$fg_bold[yellow]<branch><status><update>$reset_color$fg[red]]$reset_color" 2>/dev/null
-         hg prompt --angle-brackets "[<branch><status><update>] " 2>/dev/null
-}
 
 #PS1='[%?]%{$fg[green]%}%~%{$reset_color%}%{$fg[yellow]%}$(__git_ps1 "[%s]")$(__vcs_ps1) %{$reset_color%}\$ '
 
@@ -29,7 +23,7 @@ hg_ps1() {
 
 if [ "$USER" = "root" ]; then NCOLOR="red"; else NCOLOR="white"; fi
  
-PROMPT='%(?..[%?] )%{$fg[green]%}%m%{$reset_color%}:%{$fg[green]%}%~%{$reset_color%} $(git_prompt_info)$(hg_ps1)$(__vcs_ps1)%(!.#.$) '
+PROMPT='%(?..[%?] )%{$fg[green]%}%m%{$reset_color%}:%{$fg[green]%}%~%{$reset_color%} $(__git_ps1 "[%s]")$(__vcs_ps1)%(!.#.$) '
 #PROMPT='[%?]%{$fg[green]%}%~%{$reset_color%} %(!.#.$) '
 RPROMPT='[%*]'
 
