@@ -10,6 +10,7 @@ function wd {
         if [ -z "$*" ] ; then
                 wd tag sys      
         else
+                OLDIFS="$IFS"
                 IFS="
 "
                 for LINE in `ps -eaf | grep '[j]ava.*-Dcatalina.home'`
@@ -23,10 +24,12 @@ function wd {
                         done
                         echo
                 done
+                IFS="$OLDIFS"
         fi
 }
 
 wdnice () {
+    OLDIFS="$IFS"
 	IFS="
 "
 	for LINE in `ps -eaf | grep '[j]ava.*-Dcatalina.home'`
@@ -37,7 +40,7 @@ wdnice () {
 		echo "----------------------"
 		echo 
 	done
-
+    IFS="$OLDIFS"
 }
 
 # excel completion

@@ -38,7 +38,6 @@ set mouse=a		" Enable mouse usage (all modes) in terminals
 
 set history=1000
 set undolevels=1000
-set wildignore=*.swp,*.bak,*.pyc,*.class
 set title
 set visualbell
 set noerrorbells
@@ -82,4 +81,7 @@ autocmd BufWritePre *.{properties,xml,java} :%s/\s\+$//e
 autocmd BufRead *.{xml,java} set makeprg=ant\ -emacs
 " autocmd BufRead *.{xml,java} set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
 
-
+" Better expansion
+set wildmenu
+set wildmode=longest:full,full
+set wildignore+=*.swp,*.bak,*.pyc,*.class,build,.git,.svn,*.swc,ui

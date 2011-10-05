@@ -13,3 +13,6 @@
 [submodule "home/.zsh.d/lib/j"]
 	path = home/.zsh.d/lib/j
 	url = git://github.com/burke/j.git
+[submodule "home/.vim/bundle/command-t"]
+	path = home/.vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
