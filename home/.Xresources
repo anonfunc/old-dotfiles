@@ -14,6 +14,7 @@ URxvt.selection.pattern-0: ([0-9.]+\\/[oA-Z][mA-Z][sA-Z]{0,3}-[0-9]+)
 URxvt.selection-autotransform.0: s/^([0-9.]+\\/[oA-Z][mA-Z][sA-Z]{0,3}-[0-9]+)$/git checkout $1/
 URxvt.selection-autotransform.1: s/^([a-z0-9]{40}|[a-z0-9]{7})$/git show $1/
 URxvt.selection-autotransform.2: s/^(.*\.dump)$/less $1/
+URxvt.selection-autotransform.3: s/^[ab]\\/(.*)$/e `gw $1`/
 
 URxvt.scrollBar: 0
 !URxvt.background: #222222
