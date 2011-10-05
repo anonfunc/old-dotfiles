@@ -85,3 +85,6 @@ autocmd BufRead *.{xml,java} set makeprg=ant\ -emacs
 set wildmenu
 set wildmode=longest:full,full
 set wildignore+=*.swp,*.bak,*.pyc,*.class,build,.git,.svn,*.swc,ui
+
+" Use ack
+set grepprg=ack

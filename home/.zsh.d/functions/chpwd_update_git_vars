@@ -1,1 +1,14 @@
-update_current_git_vars
+if [[ "${__GIT_DIR#$PWD}" == "/.git" ]]
+then
+    return
+fi
+
+if [[ "${PWD#${__GIT_DIR%.git}}" == "$PWD" ]]
+then
+    if [ -d .git ]; then
+        __GIT_DIR=${PWD}/.git
+    else
+        __GIT_DIR=$(git rev-parse --git-dir 2>/dev/null)
+    fi
+    update_current_git_vars
+fi
