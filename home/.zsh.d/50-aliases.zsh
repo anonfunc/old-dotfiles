@@ -3,6 +3,8 @@ alias ls='ls --color --quoting-style=shell'
 alias antc="ant -logger org.apache.tools.ant.listener.AnsiColorLogger"
 alias antn="ant -logger org.apache.tools.ant.NoBannerLogger"
 alias antb="ant -logger org.apache.tools.ant.listener.BigProjectLogger"
+alias antsb="ant -logger org.apache.tools.ant.listener.SimpleBigProjectLogger"
+alias ant="ant -logger org.apache.tools.ant.listener.SimpleBigProjectLogger"
 
 alias l=ls
 alias ll='ls -lh'
