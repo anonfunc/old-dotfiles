@@ -13,4 +13,8 @@ periodic_functions+='update_current_git_vars'
 if [ "$USER" = "root" ]; then NCOLOR="red"; else NCOLOR="green"; fi
  
 PROMPT='%(?..[%?] )%{$fg[green]%}%m%{$reset_color%}:%{$fg[NCOLOR]%}%~%{$reset_color%}$(prompt_git_info)$(vcs_ps1)%{$reset_color%}%(!.#.$) '
-RPROMPT='[%*]'
+
+if [ "$TERM" != "eterm-color" ]
+then
+	RPROMPT='[%*]'
+fi
