@@ -36,12 +36,15 @@ shift+Left move-left
 shift+Down move-down
 shift+Up move-up
 shift+Right move-right
-space warp,click 1,end
+#space warp,click 1,end
+space warp,sh "xdotool click 1",end
 Return warp,sh "xdotool click 3",end
 b warp,click 2,end
 semicolon warp
-1 click 1
-2 click 2
+#1 click 1
+#2 click 2
+1 sh "xdotool click 1"
+2 sh "xdotool click 2"
 3 sh "xdotool click 3"
 4 sh "xdotool click 4"
 5 sh "xdotool click 5"
