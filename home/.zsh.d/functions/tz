@@ -1,0 +1,8 @@
+echo Ireland=`TZ="Europe/Dublin" date`
+
+echo Munich=`TZ="Europe/Berlin" date`
+
+echo New Zealand=`TZ="NZ" date`
+
+echo Chicago=`TZ="America/Chicago" date`
+echo Pleasanton=`TZ="America/Los_Angeles" date`

@@ -1,0 +1,8 @@
+grabssh
+
+if screen -list | grep -q "No Sockets found"
+then
+    screen
+else
+    screen -x
+fi

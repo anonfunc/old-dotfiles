@@ -1,0 +1,12 @@
+OLDIFS="$IFS"
+IFS="
+"
+for LINE in `ps -eaf | grep '[j]ava.*-Dcatalina.home'`
+do
+    echo "----------------------"
+#		IFS=" "
+    echo "$LINE" | sed -e "s/ -\\([DXa-z]\\)/\n -\\1/g"
+    echo "----------------------"
+    echo 
+done
+IFS="$OLDIFS"

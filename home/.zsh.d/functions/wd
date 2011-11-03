@@ -1,0 +1,19 @@
+if [ -z "$*" ] ; then
+    wd tag sys      
+else
+    OLDIFS="$IFS"
+    IFS="
+"
+    for LINE in `ps -eaf | grep '[j]ava.*-Dcatalina.home'`
+    do
+	echo -n "$LINE" | awk '{ printf("%s\t%s\t", $1,$2); }'
+	for ARG in $*
+	do
+	    echo -n "$LINE" | grep "$ARG" |sed -e "s/^.*\\($ARG=\\?[^ ]*\\).*$/\\1/" \
+		| tr -d '\n' 
+	    echo -n -e "\t"
+	done
+	echo
+    done
+    IFS="$OLDIFS"
+fi

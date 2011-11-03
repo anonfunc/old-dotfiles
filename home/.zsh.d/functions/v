@@ -1,0 +1,7 @@
+if echo "$TERM" | grep screen
+then
+    vim $*
+else
+    gvim $*
+fi
+

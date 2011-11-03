@@ -1,0 +1,3 @@
+# mwittenberg's wdservices function
+ps -eaf | grep '[j]ava.*-Dwd.tag' \
+        | sed -e 's/\([0-9][0-9]*\) *\([0-9][0-9]*\) *.*\(tag=[^ ]*\) .*/\1 \2 \3/'

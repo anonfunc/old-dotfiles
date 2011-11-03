@@ -1,0 +1,6 @@
+if echo "$TERM" | grep -q screen
+then
+    emacsclient --alternate-editor=vim -c -t $*
+else
+    emacsclient --alternate-editor=gvim -c $*
+fi

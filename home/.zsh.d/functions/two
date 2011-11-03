@@ -1,0 +1,16 @@
+# xrandr --output CRT1 --auto --above LCD
+# xrandr --output CRT1 --auto --right-of LCD
+LAPTOP=LVDS
+LEFT=CRT1
+RIGHT=DFP1
+
+#ROTATE=left
+ROTATE=normal
+#LEFT=VGA-0
+#RIGHT=DVI-0
+
+
+xrandr --output $LAPTOP --off
+
+# 1920 / 24 == 80
+xrandr --output $LEFT --auto --primary --rotate $ROTATE --output $RIGHT --auto --rotate $ROTATE --right-of $LEFT

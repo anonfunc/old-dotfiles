@@ -1,0 +1,5 @@
+export SSH_CLIENT=""
+export SSH_TTY=""
+export SSH_AUTH_SOCK="/tmp/keyring-k0lUJg/ssh"
+export SSH_CONNECTION=""
+export DISPLAY=":0.0"
