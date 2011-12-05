@@ -13,3 +13,15 @@ defscrollback 300000
 
 ignorecase on
 startup_message off
+
+# Hardstatus:
+# pgrep -f "java.*CRED" && echo CRED
+backtick 1 13 13 sh -c "pgrep -f '[j]ava.*CRED' >/dev/null && echo CRED"
+backtick 2 13 13 sh -c "pgrep -f '[j]ava.*DCS' >/dev/null && echo DCS"
+backtick 3 13 13 sh -c "pgrep -f '[j]ava.*OTS' >/dev/null && echo OTS"
+backtick 4 13 13 sh -c "pgrep -f '[j]ava.*EMS' >/dev/null && echo EMS"
+backtick 5 13 13 sh -c "pgrep -f '[j]ava.*UI' >/dev/null && echo UI"
+
+hardstatus on
+hardstatus alwayslastline "%{= kd}%-w%>%{+ M}%n %t%{-}%+w%-31<%=%?%{+ g}%1`%{-}%:%{+ r}CRED%{-}%? %?%{+ g}%2`%{-}%:%{+ r}DCS%{-}%? %?%{+ g}%3`%{-}%:%{+ r}OTS%{-}%? %?%{+ g}%4`%{-}%:%{+ r}EMS%{-}%? %?%{+ g}%5`%{-}%:%{+ r}UI%{-}%? - %{+ y}%c:%s"
+
