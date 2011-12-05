@@ -1,4 +1,0 @@
-# 1920 / 16 inches = 120
-xrandr --dpi 120/LVDS
-xrandr --output CRT1 --off --output DFP1 --off  --output DFP_EXTTMDS --off
-xrandr --output LVDS --auto --rotate normal
