@@ -56,16 +56,20 @@ set nobackup
 set noswapfile
 
 
-" JJ in insert is <esc>
-inoremap jj <ESC>
+" JK in insert is <esc>
+inoremap jk <ESC>
 
 " Show whitespace mode.
 "set list
 "set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 " Custom commands
-nmap <silent> <leader>\ :nohlsearch<cr>
-nmap <silent> <leader>n :NERDTree<cr>
+nnoremap <silent> <leader>\ :nohlsearch<cr>
+nnoremap <silent> <leader>n :NERDTree<cr>
+
+" From learn vimscript the hard way
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " trick from
 " http://stackoverflow.com/questions/95072/what-are-your-favorite-vim-tricks 
