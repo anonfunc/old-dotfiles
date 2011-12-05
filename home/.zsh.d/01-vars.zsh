@@ -24,6 +24,9 @@ export GDK_NATIVE_WINDOWS=1
 export MAILDIR="/home/first/Mail"
 export ANDROID_HOME="/home/first/Playground/android-sdk-linux_x86"
 
+
+export REALTERM=${REALTERM:-$TERM}
+
 fpath=("$HOME/.zsh.d/comp" $fpath)
 fpath=("$HOME/.zsh.d/functions" $fpath)
 autoload -U ~/.zsh.d/functions/*(:t)

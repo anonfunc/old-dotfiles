@@ -58,7 +58,7 @@ preexec_title() {
     if [[ "$TERM" == "screen" || "$TERM" == "screen-256color" ]]
     then
         local CMD=${2}
-        settitle "${TITLE:-$PWD:$CMD}"
+        settitle "${TITLE:-${PWD//$HOME/~}:$CMD}"
     fi
 }
 
