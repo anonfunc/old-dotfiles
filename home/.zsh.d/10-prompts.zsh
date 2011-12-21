@@ -20,7 +20,7 @@ else
     NCOLOR="blue"
 fi
  
-PROMPT='%(?..[%?] )%{$fg[green]%}%m%{$reset_color%}:%{$fg[NCOLOR]%}%~%{$reset_color%}$(prompt_git_info)$(vcs_ps1)%{$reset_color%}%(!.#.$) '
+PROMPT='%(?..[%?] )%{$fg[$NCOLOR]%}%m%{$reset_color%}:%~$(prompt_git_info)$(vcs_ps1)%{$reset_color%}%(!.#.$) '
 
 if [ "$TERM" != "eterm-color" ]
 then
