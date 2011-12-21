@@ -1,2 +1,2 @@
-echo "$1" | egrep -q '(ls|cd|less|more|ps|kill|man|mkdir|ack|ant|diff|echo|apt|du|grep|file|killall|pkill|pgrep|j|wd) *'
+echo "$1" | egrep -q '(ls|cd|less|more|ps|kill|man|mkdir|ack|ant|diff|echo|apt|du|grep|file|killall|pkill|pgrep|j|wd) ?'
 __EXECUTED_GIT_COMMAND=$?
