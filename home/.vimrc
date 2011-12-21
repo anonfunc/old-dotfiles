@@ -66,6 +66,9 @@ inoremap jk <ESC>
 " Custom commands
 nnoremap <silent> <leader>\ :nohlsearch<cr>
 nnoremap <silent> <leader>n :NERDTree<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gb :Gblame<cr>
+
 
 " From learn vimscript the hard way
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
