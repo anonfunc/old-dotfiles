@@ -1,6 +1,6 @@
 export LD_LIBRARY_PATH=/usr/local/lib
-export JAVA_HOME="/opt/jdk1.6.0_15"
-export JDK_HOME="/opt/jdk1.6.0_15"
+export JAVA_HOME="/opt/jdk1.6.0_29"
+export JDK_HOME="/opt/jdk1.6.0_29"
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/bin/git-scripts:$PATH"
