@@ -38,7 +38,9 @@ shift+Up move-up
 shift+Right move-right
 #space warp,click 1,end
 space warp,sh "xdotool click 1",end
+shift+space warp,sh "xdotool click 1",history-back,history-back
 Return warp,sh "xdotool click 3",end
+shift+Return warp,sh "xdotool click 3",history-back,history-back
 b warp,click 2,end
 semicolon warp
 #1 click 1
@@ -72,3 +74,8 @@ p warp, click 1, end, sh "xclip -o | xo_paster.perl"
 
 # Record macros
 q record /home/first/.keynav_macros
+
+# Mouse scrolling
+
+j warp,click 5
+k warp,click 4
