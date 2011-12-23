@@ -69,6 +69,8 @@ nnoremap <silent> <leader>n :NERDTree<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gb :Gblame<cr>
 
+nnoremap <SPACE> :
+nnoremap <SPACE><SPACE> :!
 
 " From learn vimscript the hard way
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
