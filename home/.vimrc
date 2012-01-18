@@ -72,6 +72,8 @@ nnoremap <leader>gb :Gblame<cr>
 nnoremap <SPACE> :
 nnoremap <SPACE><SPACE> :!
 
+nnoremap ZX :q!<cr>
+
 " From learn vimscript the hard way
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
