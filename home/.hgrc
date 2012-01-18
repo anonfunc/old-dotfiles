@@ -30,3 +30,4 @@ color =
 schemes=
 hgext.bookmarks =
 hggit =
+rebase =

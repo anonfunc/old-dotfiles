@@ -32,14 +32,9 @@
     good-reviewer = "!git has-reviewer && git rev-list -n1 HEAD --oneline | grep -v -q '\\[none\\]'"
     svnchanged = ! git log --pretty="format:" --name-only `git svntip`..HEAD | sort | uniq
     vd = push -f SUV HEAD
-    teamcity11 = tc bt157
-    teamcity12 = tc bt219
-    teamcity13 = tc bt270
-    teamcity14 = tc bt317
-    teamcity = tc bt411
-    tcc = tc bt412
-    teamcity-wmu = tc bt431
-    teamcity-rabbit11 = tc bt189 tools/fulltest/rabbit/build.properties
+    teamcity15 = tc bt411
+    teamcity = tc bt518
+    teamcity-wmu = tc bt538
     teamcity-rabbit = tc bt246 tools/fulltest/rabbit/build.properties
     # Convenience?
     c = checkout
@@ -54,6 +49,10 @@
     ss = !git svnsquash
     sh = show HEAD
     ja = jira all
+
+# From http://gitready.com/advanced/2011/10/21/ribbon-and-catchup-reading-new-commits.html
+    ribbon = tag --force _ribbon svn/trunk
+    catchup = log -p --reverse --topo-order _ribbon..svn/trunk
 [merge]
 #	tool = meld
     #tool = emacs
