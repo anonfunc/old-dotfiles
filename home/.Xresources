@@ -9,6 +9,7 @@ URxvt.matcher.pattern.3: (?<!CR-)([oA-Z][mA-Z][sA-Z]{0,3}-[0-9]+)
 URxvt.matcher.launcher.3: sensible-browser https\:\057\057jira.workplace.com/browse/$1
 !URxvt.matcher.pattern.4: (?<!CR-)([A-Z][A-Z][A-Z][A-Z]?[A-Z]?-[1-9]+)
 !URxvt.matcher.launcher.4: sensible-browser https\:\057\057jira.workplace.com/browse/$1
+URxvt.matcher.pattern.4:  \\B/.*\\.html
 
 URxvt.selection.pattern-0: ([0-9.]+\\/[oA-Z][mA-Z][sA-Z]{0,3}-[0-9]+)
 URxvt.selection-autotransform.0: s/^([0-9.]+\\/[oA-Z][mA-Z][sA-Z]{0,3}-[0-9]+)$/git checkout $1/
