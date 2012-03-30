@@ -8,7 +8,7 @@ colors
 preexec_functions+='preexec_update_git_vars'
 precmd_functions+='precmd_update_git_vars'
 chpwd_functions+='chpwd_update_git_vars'
-periodic_functions+='update_current_git_vars'
+# periodic_functions+='update_current_git_vars'
 
 if [ "$USER" = "root" ]
 then

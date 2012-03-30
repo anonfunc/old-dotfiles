@@ -1,13 +1,18 @@
+zmodload -a complist
+zmodload -a autocomplete
+
+zstyle :compinstall filename '/home/first/.zshrc'
+
+
+
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*:paths' accept-exact 'c:' 'e:' 'l:' 'f:' 
+zstyle ':completion:*' fake-files '/c:' '/e:' '/l:' '/f:' 
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
 #zstyle ':completion:::::' completer _complete _approximate
 
-_force_rehash() {
-  (( CURRENT == 1 )) && rehash
-  return 1	# Because we didn't really complete anything
-}
-
-zstyle ':completion:::::' completer _force_rehash _complete _approximate
-
-zstyle -e ':completion:*:approximate:*' max-errors 'reply=( $(( ($#PREFIX + $#SUFFIX) / 3 )) )'
 zstyle ':completion:*:descriptions' format "- %d -"
 zstyle ':completion:*:corrections' format "- %d - (errors %e})"
 zstyle ':completion:*:default' list-prompt '%S%M matches%s'
@@ -30,3 +35,6 @@ jiras () {
 
 compctl -K jiras git-work-on
 compctl -K _git-checkout git-checkout
+
+autoload -Uz compinit
+compinit

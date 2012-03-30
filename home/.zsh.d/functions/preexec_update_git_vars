@@ -1,2 +1,8 @@
-echo "$1" | egrep -q '(ls|cd|less|more|ps|kill|man|mkdir|ack|ant|diff|echo|apt|du|grep|file|killall|pkill|pgrep|j|wd) ?'
-__EXECUTED_GIT_COMMAND=$?
+case "$1" in
+     git*|vi*|'g '*)
+     __EXECUTED_GIT_COMMAND=1
+     ;;
+     *)
+     __EXECUTED_GIT_COMMAND=0
+     ;;
+esac 
