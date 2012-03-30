@@ -41,7 +41,7 @@ space warp,sh "xdotool click 1",end
 shift+space warp,sh "xdotool click 1",history-back,history-back
 Return warp,sh "xdotool click 3",end
 shift+Return warp,sh "xdotool click 3",history-back,history-back
-b warp,click 2,end
+b warp,sh "xdotool click 2",end
 semicolon warp
 #1 click 1
 #2 click 2
@@ -51,11 +51,11 @@ semicolon warp
 4 sh "xdotool click 4"
 5 sh "xdotool click 5"
 
-### Drag examples
+### Drag examples.  Crashy for now.
 # Start drag holding the left mouse button
-apostrophe drag 1
-comma drag 2
-period drag 1
+#apostrophe drag 1
+#comma drag 2
+#period drag 1
 # Start drag holding middle mouse + control and shift
 #j drag 2 ctrl+shift
 
@@ -68,9 +68,10 @@ r sh "killall keynav ; keynav"
 
 ### XO Commands from .xbindkeysrc?
 ### Some mods.
-c warp,click 3,end,sh "xdotool key Down Down Down Down Return"
-n warp,click 3,end,sh "sleep 0.3 && xdotool key Return"
-p warp, click 1, end, sh "xclip -o | xo_paster.perl"
+c warp,sh "xdotool click 3 && sleep 0.3 && xdotool key Down Down Down Down Return",end
+n warp,sh "xdotool click 3 && sleep 0.3 && xdotool key Return",end
+p warp,sh "xdotool click 1 && sleep 0.3 && xclip -o | xo_paster.perl",end
+shift+p warp,sh "xdotool click 1 && sleep 0.3 && dmenu -i -l 20 <~/.xo | xo_paster.perl",end
 
 # Record macros
 q record /home/first/.keynav_macros
