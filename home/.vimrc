@@ -65,7 +65,7 @@ inoremap jk <ESC>
 
 " Custom commands
 nnoremap <silent> <leader>\ :nohlsearch<cr>
-nnoremap <silent> <leader>n :NERDTree<cr>
+nnoremap <silent> <leader>n :NERDTreeFind<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gb :Gblame<cr>
 
@@ -99,3 +99,8 @@ set wildignore+=*.swp,*.bak,*.pyc,*.class,build,.git,.svn,*.swc,ui
 
 " Use ack
 set grepprg=ack
+
+" NerdTree tweaks
+" open a NERDTree automatically when vim starts up if no files were specified
+autocmd vimenter * if !argc() | NERDTree | endif
+

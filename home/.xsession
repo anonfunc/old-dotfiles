@@ -3,6 +3,7 @@ export WINDOW_MANAGER="/usr/bin/xmonad"
 #gnome-settings-daemon &
 #gnome-power-manager &
 auto-dock &
+qs &
 #nautilus -n &
 /usr/bin/avfsd -o allow_root -o intr -o sync_read ~/.avfs 
 autocutsel -f

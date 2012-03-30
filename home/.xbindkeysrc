@@ -5,7 +5,7 @@
 # Shift + Middle button, opens flex link in new window.
 # gb is Vimperator command for go back to the last buffer.
 # Not sure what you'd do in a stock firefox.
-"xdotool click 3 && sleep 0.45 && xdotool key Down Return"
+"xdotool click 3 && sleep 0.45 && xdotool key Return"
   shift + b:2 + Release
 
 # Control + Shift + Middle Click, runs copy text/id.
@@ -25,6 +25,9 @@
 #"xdotool keyup alt && xx && xdotool click 1 && xdotool key Home shift+End Delete 'Control_L+v' && sleep 0.45 && xdotool key Return"
 "xdotool click 1 && xclip -o | xo_paster.perl"
   alt + b:2 + Release
+
+"dmenu -i -l 20 <~/.xo | xo_paster.perl"
+  alt + v
 
 ## Volume!
 #"aumix -v +10"
