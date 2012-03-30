@@ -16,3 +16,6 @@
 [submodule "home/.vim/bundle/command-t"]
 	path = home/.vim/bundle/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "home/.zsh.d/lib/f"]
+	path = home/.zsh.d/lib/f
+	url = git://github.com/clvv/f.git

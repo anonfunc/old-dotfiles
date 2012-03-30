@@ -3,9 +3,9 @@ XTerm.faceSize: 16
 URxvt.perl-ext-common: default,matcher,searchable-scrollback,selection-autotransform
 URxvt.matcher.button: 1
 URxvt.matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
-URxvt.matcher.pattern.2: (CR-[A-Z][A-Z][A-Z][A-Z]?[A-Z]?-[0-9]+)
+URxvt.matcher.pattern.2: (CR-[A-Z]{3,7}-[0-9]+)
 URxvt.matcher.launcher.2: sensible-browser https\:\057\057crucible.workplace.com/cru/$1
-URxvt.matcher.pattern.3: (?<!CR-)([oA-Z][mA-Z][sA-Z]{0,3}-[0-9]+)
+URxvt.matcher.pattern.3: (?<!CR-)([omsdplyA-Z]{3,7}-[0-9]+)
 URxvt.matcher.launcher.3: sensible-browser https\:\057\057jira.workplace.com/browse/$1
 !URxvt.matcher.pattern.4: (?<!CR-)([A-Z][A-Z][A-Z][A-Z]?[A-Z]?-[1-9]+)
 !URxvt.matcher.launcher.4: sensible-browser https\:\057\057jira.workplace.com/browse/$1
