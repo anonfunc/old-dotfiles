@@ -25,7 +25,7 @@
     annotate = blame -w
     who = shortlog -s -n --
     graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
-    patch = !git diff --no-prefix -U10000 --patience `git svntip` HEAD
+    patch = !git diff --no-prefix -w -U10000 --patience `git svntip` HEAD
     svntip = rev-list -n1 --grep=git-svn-id HEAD
     svnsquash = !git rebase -i `git svntip`
     has-reviewer = "!git rev-list -n1 HEAD --oneline | grep -q '\\[.*\\]'"
@@ -55,7 +55,7 @@
     catchup = log -p --reverse --topo-order _ribbon..svn/trunk
 [merge]
 #	tool = meld
-    #tool = emacs
+    #tool = fugitive
     tool = fugitive
 [mergetool "fugitive"]
     cmd = /usr/local/bin/vim -f -c \"Gdiff\" \"$MERGED\"
@@ -67,6 +67,7 @@
 [core]
     whitespace = fix,-indent-with-non-tab,trailing-space,-cr-at-eol
     editor = /usr/local/bin/vim
+	preloadIndex = false
 #	pager = less -$LESS -SFRX -SR +'/^---'
 [help]
     autocorrect = 5
@@ -75,7 +76,9 @@
 [guitool "SVN Rebase"]
     cmd = git svn rebase
 [notes]
-    rewriteRef = refs/notes/commits
+    rewriteRef = refs/notes/*
 [filter "scrub"]
     clean = scrub
     smudge = unscrub
+[status]
+	showUntrackedFiles = normal
