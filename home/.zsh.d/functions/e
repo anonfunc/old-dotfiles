@@ -1,6 +1,6 @@
 if echo "$TERM" | grep -q screen
 then
-    emacsclient --alternate-editor=vim -c -t $*
+    TERM=xterm-256color emacsclient --alternate-editor=vim -c -t $*
 else
     emacsclient --alternate-editor=gvim -c $*
 fi
